@@ -16,7 +16,7 @@ const updateUi = (ip, location, timeZone, isp) => {
 };
 const searchIpAdress = async (input) => {
     try {
-    const req = await fetch('/.netlify/functions/fetchData');
+    const req = await fetch(`/.netlify/functions/fetchData?ipAddress=${input}`);
     const response = await req.json();
   if (response.location && response.location.lat && response.location.lng) {
     const { location, ip, isp } = response;
