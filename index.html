@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An IP API and location tracker">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="shortcut icon" href="find-me.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>IP AND LOCATION || FIND ME</title>
+</head>
+
+<body>
+    <header>
+        <div class="background">
+            <div class="title">
+                <h1>IP and Location Tracker</h1>
+            </div>
+            <div class="input-container">
+                <form>
+                    <div class="input-group">
+                        <input type="text" name="input" id="input" placeholder="Type an IP address...">
+                        <input type="submit" value="Submit" id="submit-btn">
+                    </div>
+                </form>
+                <p class="title">Type in an IP Address to get the details.</p>
+                <div class="noTextIp">
+                <span>Dont know an IP?</span>
+                <button id="noText">Find My IP</button>
+                <span>&larr; Click the button</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="outputContainers">
+            <div class="info-box" id="ip-info">
+                <h3>IP Address</h3>
+                <p id="ip-address">Your IP will be displayed here...</p>
+            </div>
+            <div class="info-box" id="location-info">
+                <h3>Location</h3>
+                <p id="location">Your location will be displayed here...</p>
+            </div>
+            <div class="info-box" id="timezone-info">
+                <h3>Time Zone</h3>
+                <p id="timeZone">Your time zone will be displayed here...</p>
+            </div>
+            <div class="info-box" id="isp-info">
+                <h3>ISP</h3>
+                <p id="isp">Your ISP will be displayed here...</p>
+            </div>
+        </div>
+    </header>
+    <div class="map" id="map"></div>
+    <script src="public/javascript/script.js"></script>
+</body>
+
+</html>
